@@ -1,11 +1,11 @@
+import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'helpers/classNames/classNames'
 import { FC, lazy, Suspense } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import { useTheme } from 'theme/useTheme'
 
 // Используем динамические импорты для страниц
-const AboutPage = lazy(() => import('pages/About/About'))
-const MainPage = lazy(() => import('pages/Main/Main'))
+const AboutPage = lazy(() => import('pages/About/index'))
+const MainPage = lazy(() => import('pages/Main/index'))
 
 const App: FC = () => {
   const { theme, toggleTheme } = useTheme()
